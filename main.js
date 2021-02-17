@@ -9,7 +9,7 @@ const osm = new L.tileLayer(
 
 //UNAM 1965
 const unam1965 = new L.tileLayer(
-  "http://lincolnmullen.com/projects/unam1965/{z}/{x}/{-y}.png",
+  "https://lincolnmullen.com/projects/unam1965/{z}/{x}/{-y}.png",
   {
     attribution: "Photograph attribution goes here",
   }
