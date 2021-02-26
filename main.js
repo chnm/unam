@@ -1,3 +1,5 @@
+const TILE_BASE = "https://scholarship.rrchnm.org/unam-tiles";
+
 //OSM
 const osm = new L.tileLayer(
   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -7,17 +9,36 @@ const osm = new L.tileLayer(
   }
 );
 
-//UNAM 1965
-const unam1965 = new L.tileLayer(
-  "tiles/UNAM1965_tiles/{z}/{x}/{-y}.png",
+const unam1951a = new L.tileLayer(
+  `${TILE_BASE}/UNAM_14Sept1951_tiles/{z}/{x}/{-y}.png`,
   {
     attribution: "Photograph attribution goes here",
   }
 );
 
-//UNAM 1953
+const unam1951b = new L.tileLayer(
+  `${TILE_BASE}/UNAM_19Sept1951_tiles/{z}/{x}/{-y}.png`,
+  {
+    attribution: "Photograph attribution goes here",
+  }
+);
+
+const unam1946 = new L.tileLayer(
+  `${TILE_BASE}/UNAM_1946_tiles/{z}/{x}/{-y}.png`,
+  {
+    attribution: "Photograph attribution goes here",
+  }
+);
+
 const unam1953 = new L.tileLayer(
-  "tiles/UNAM_Feb1953_tiles/{z}/{x}/{-y}.png",
+  `${TILE_BASE}/UNAM_Feb1953_tiles/{z}/{x}/{-y}.png`,
+  {
+    attribution: "Photograph attribution goes here",
+  }
+);
+
+const unam1965 = new L.tileLayer(
+  `${TILE_BASE}/UNAM1965_tiles/{z}/{x}/{-y}.png`,
   {
     attribution: "Photograph attribution goes here",
   }
@@ -40,6 +61,9 @@ const Map_BaseLayer = {
 
 //Additional layers
 const Map_AddLayer = {
+  "UNAM 1946": unam1946,
+  "UNAM 1951 (Sept. 14)": unam1951a,
+  "UNAM 1951 (Sept. 19)": unam1951b,
   "UNAM 1953": unam1953,
   "UNAM 1965": unam1965,
 };
